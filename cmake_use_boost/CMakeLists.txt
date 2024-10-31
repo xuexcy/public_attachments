@@ -20,6 +20,7 @@ FetchContent_Declare(
     boost
     # boost release 下载地址
     URL https://github.com/boostorg/boost/releases/download/boost-1.86.0/boost-1.86.0-cmake.tar.gz
+	URL_HASH MD5=c62ce6e64d34414864fef946363db91cea89c1b90360eabed0515f0eda74c75c
     DOWNLOAD_EXTRACT_TIMESTAMP ON
     # 下载后解压到本地的目录
     SOURCE_DIR ${THIRDPARTY_DIR}/boost
