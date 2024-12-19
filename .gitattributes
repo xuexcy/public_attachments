@@ -1,0 +1,10 @@
+books/深度探索C++对象模型.pdf filter=lfs diff=lfs merge=lfs -text
+books/C++20[[:space:]]模板concept.md filter=lfs diff=lfs merge=lfs -text
+books/Effective[[:space:]]C++中文版（第三版）.pdf filter=lfs diff=lfs merge=lfs -text
+books/STL源码剖析简体中文完整版(清晰扫描带目录).pdf filter=lfs diff=lfs merge=lfs -text
+books/modern-cpp-tutorial-en-us.pdf filter=lfs diff=lfs merge=lfs -text
+books/modern-cpp-tutorial-zh-cn.pdf filter=lfs diff=lfs merge=lfs -text
+books/C++[[:space:]]Templates[[:space:]](第2版中文版)[[:space:]]([[:space:]]etc.)[[:space:]](Z-Library).pdf filter=lfs diff=lfs merge=lfs -text
+books/C++_并发编程实战_第二版_Anthony_Williams.pdf filter=lfs diff=lfs merge=lfs -text
+books/EffectiveModernCpp.pdf filter=lfs diff=lfs merge=lfs -text
+books/EffectiveModernCpp_cn.pdf filter=lfs diff=lfs merge=lfs -text
