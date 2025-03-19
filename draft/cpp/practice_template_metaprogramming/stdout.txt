@@ -1,0 +1,22 @@
+integral_constant<b, true>::operator b()
+1
+true_type::value: true
+true_type::value: true
+false_type::value: false
+a_float::value: 2.33
+is_function<f1>: true
+is_function<f2>: true
+is_function<f3>: true
+is_function<int>: false
+rank<int>: 0
+rank<int[]>: 1
+rank<int[10]>: 1
+rank<int[10][20]>: 2
+static_max<1>::value: 1
+static_max<1, 2, 3, 4, 5>::value: 5
+conjunction_<>>::value: true
+conjunction_v<is_const<a>, is_function<f1>>: false
+conjunction_v<is_const<b>, is_function<f1>>: true
+is_convertible<int, double>::value: false
+is_convertible<int, char>::value: false
+is_convertible<double, char>::value: false
