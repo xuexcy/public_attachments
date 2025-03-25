@@ -1,0 +1,33 @@
+bool is_all_true_v1(const std::initializer_list<bool> &)
+is_all_true_v1(a, b, c): true
+bool is_all_true_v2(Args &&...) [Args = <int &, bool &, (lambda at /Users/xuechengyun/code/public_attachments/draft/cpp/learning_grammar/is_all_true/main.cc:61:12) &>]
+is_all_true_v2(a, b, c): true
+bool is_all_true_v3(Args &&...) [Args = <int &, bool &, (lambda at /Users/xuechengyun/code/public_attachments/draft/cpp/learning_grammar/is_all_true/main.cc:61:12) &>]
+this is c: true
+is_all_true_v3(a, b, c): true
+bool is_all_true_v1(const std::initializer_list<bool> &)
+is_all_true_v1({d1, d1->value}): true
+bool is_all_true_v2(Args &&...) [Args = <Data *&, int &>]
+is_all_true_v2(d1, d1->value): true
+bool is_all_true_v3(Args &&...) [Args = <Data *&, int &>]
+is_all_true_v3(d1, d1->value): true
+bool is_all_true_v3(Args &&...) [Args = <Data *&, int &>]
+is_all_true_v3(d2, d2->value): false
+bool is_all_true_v2(Args &&...) [Args = <bool &, (lambda at /Users/xuechengyun/code/public_attachments/draft/cpp/learning_grammar/is_all_true/main.cc:61:12) &>]
+is_all_true_v2(b, c): true
+bool is_all_true_v2(Args &&...) [Args = <int *&, (lambda at /Users/xuechengyun/code/public_attachments/draft/cpp/learning_grammar/is_all_true/main.cc:61:12) &>]
+is_all_true_v2(d, c): false
+bool is_all_true_v3(Args &&...) [Args = <bool &, (lambda at /Users/xuechengyun/code/public_attachments/draft/cpp/learning_grammar/is_all_true/main.cc:61:12) &>]
+this is c: true
+is_all_true_v3(b, c): true
+bool is_all_true_v3(Args &&...) [Args = <int *&, (lambda at /Users/xuechengyun/code/public_attachments/draft/cpp/learning_grammar/is_all_true/main.cc:61:12) &>]
+is_all_true_v3(d, c): false
+bool is_all_true_v2(Args &&...) [Args = <(lambda at /Users/xuechengyun/code/public_attachments/draft/cpp/learning_grammar/is_all_true/main.cc:61:12) &, (lambda at /Users/xuechengyun/code/public_attachments/draft/cpp/learning_grammar/is_all_true/main.cc:66:12) &>]
+is_all_true_v2(c, e): true
+bool is_all_true_v3(Args &&...) [Args = <(lambda at /Users/xuechengyun/code/public_attachments/draft/cpp/learning_grammar/is_all_true/main.cc:61:12) &, (lambda at /Users/xuechengyun/code/public_attachments/draft/cpp/learning_grammar/is_all_true/main.cc:66:12) &>]
+this is c: true
+this is e: false
+is_all_true_v3(c, e): false
+bool is_all_true_v3(Args &&...) [Args = <(lambda at /Users/xuechengyun/code/public_attachments/draft/cpp/learning_grammar/is_all_true/main.cc:66:12) &, (lambda at /Users/xuechengyun/code/public_attachments/draft/cpp/learning_grammar/is_all_true/main.cc:61:12) &>]
+this is e: false
+is_all_true_v3(e, c): false

@@ -1,0 +1,8 @@
+.cache/
+.vscode/
+.DS_Store
+
+draft/cpp/.clang-format
+draft/cpp/build/
+draft/cpp/build_g++/
+draft/cpp/thirdparty/
