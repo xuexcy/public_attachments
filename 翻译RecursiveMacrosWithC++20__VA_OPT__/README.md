@@ -32,9 +32,9 @@
 #define FOR_EACH_HELPER(macro, a1, ...)                           \
   macro(a1)
   __VA_OPT__(FOR_EACH_AGAIN PARENS (macro, __VA_ARGS__))
-  |
-  |
-  V
+                  |
+                  |
+                  V
 #define FOR_EACH_HELPER(macro, a1, ...)                           \
   CALL_MACRO(macro, a1)                                                       \
   __VA_OPT__(FOR_EACH_AGAIN PARENS (macro, __VA_ARGS__))
