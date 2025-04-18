@@ -21,12 +21,6 @@ std::shared_ptr<Macro> API::add_macro(const std::string& macro_definition) {
   return macro;
 }
 
-/**
- * @brief 用户接口，对输入进行递归宏处理
- *
- * @param input_ : 用户输入, e.g.: "OL45", "FL(6)789"
- * @return Str : 处理结果
- */
 std::string API::expand(View input) {
   ExpandInfo expand_info;
 

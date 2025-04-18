@@ -14,9 +14,20 @@
 CUR_DIR=$(cd `dirname $0`; pwd)
 cd ${CUR_DIR}
 
+input=(
+main.cc
+context.cpp
+macro.cpp
+mini_seq.cpp
+process_macro.cpp
+seq.cpp
+token.cpp
+user_api.cpp
+utils.cpp
+)
+
 output=main
-clang++ main.cc context.cpp macro.cpp process_macro.cpp mini_seq.cpp seq.cpp token.cpp user_api.cpp utils.cpp -std=c++23 -o $output
-#clang++ main.cc macro.cpp context.cpp user_api.cpp utils.cpp -std=c++23 -o $output
+clang++ ${input[@]} -std=c++23 -o $output
 if [[ $? == 0 ]];then
   ./$output
 fi

@@ -213,7 +213,6 @@ Seq::consumed_type expand_macro_once(MacroPtr macro, Context* context) {
       replaced_res.emplace_back(view);
     }
   }
-   //= replace_all(macro.sl, macro.parameters, replacement_args);
   // It also performs stringification and pasting as indicated by # and ## in the substitution list.
   // TODO
   // replaced_res = process_hashtag(replaced_res);

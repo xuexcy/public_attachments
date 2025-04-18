@@ -47,26 +47,31 @@ void print_expand(const std::string& input, const std::string& excepted) {
 }
 
 void run() {
-  print_expand("OL123", "OL123");
-  print_expand("OL 123", "123 123");
-  print_expand("FL(5)", "((5) + 1)");
-  print_expand("FL(FL(5))", "((((5) + 1)) + 1)");
-  print_expand("ID(ID)(ID)(X)", "ID(ID)(X)");
-  print_expand("ID(ID2)(ID)(X)", "X");
-  print_expand("ID(ID2 LPAREN)ID)(X)", "X");
-  print_expand("ID(ID2 LPAREN ID))(X)", "ID(X)");
-  print_expand("ID(ID2 (ID))(X)", "ID(X)");
-  print_expand("F()","f F_AGAIN ()()");
-  print_expand("ID(F())", "f f F_AGAIN ()()");
-  print_expand("ID(ID(F()))", "f f f F_AGAIN ()()");
-  print_expand("EMPTY ", "");
-  print_expand(" EMPTY", "");
-  print_expand(" EMPTY ", "");
-  print_expand(" EMPTY() ", "()");
-  print_expand(" EMPTY() )", "() )");
-  print_expand("ID(EMPTY)", "");
-  print_expand("ID( EMPTY() )", "()");
-  print_expand("B(A(3), B)(4,5)+B(6,7)", "(3*3)+B(4,5)+6+7");
+  std::vector<std::pair<std::string, std::string>> vec {
+    {"OL123", "OL123"},
+    {"OL 123", "123 123"},
+    {"FL(5)", "((5) + 1)"},
+    {"FL(FL(5))", "((((5) + 1)) + 1)"},
+    {"ID(ID)(ID)(X)", "ID(ID)(X)"},
+    {"ID(ID2)(ID)(X)", "X"},
+    {"ID(ID2 LPAREN)ID)(X)", "X"},
+    {"ID(ID2 LPAREN ID))(X)", "ID(X)"},
+    {"ID(ID2 (ID))(X)", "ID(X)"},
+    {"F()","f F_AGAIN ()()"},
+    {"ID(F())", "f f F_AGAIN ()()"},
+    {"ID(ID(F()))", "f f f F_AGAIN ()()"},
+    {"EMPTY ", ""},
+    {" EMPTY", ""},
+    {" EMPTY ", ""},
+    {" EMPTY() ", "()"},
+    {" EMPTY() )", "() )"},
+    {"ID(EMPTY)", ""},
+    {"ID( EMPTY() )", "()"},
+    {"B(A(3), B)(4,5)+B(6,7)", "(3*3)+B(4,5)+6+7"},
+  };
+  for (auto& [input, excepted] : vec) {
+    print_expand(input, excepted);
+  }
 }
 void only_run() {
   // print_expand("ID(ID2)(ID)(X)", "X");
