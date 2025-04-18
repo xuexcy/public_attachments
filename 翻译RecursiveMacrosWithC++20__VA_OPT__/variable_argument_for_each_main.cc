@@ -11,24 +11,7 @@
 ########################################################################
 */
 
-// run cmd: c++ va_opt.cc -o va_opt -std=c++23 && ./va_opt > va_opt.stdout
-
 #include <print>
-
-#define ENUM_CASE(name) \
-  case name:            \
-    return #name;
-
-#define MAKE_ENUM(type, ...)                  \
-  enum type { __VA_ARGS__ };                  \
-  constexpr const char* to_cstring(type _e) { \
-    using enum type;                          \
-    switch (_e) {                             \
-      FOR_EACH(ENUM_CASE, __VA_ARGS__)        \
-      default:                                \
-        return "unknown";                     \
-    }                                         \
-  }
 
 #define STRINGIFY(...) #__VA_ARGS__
 #define TOSTRING(...) STRINGIFY(__VA_ARGS__)
@@ -40,13 +23,6 @@
 #define EXPAND3(...) EXPAND2(EXPAND2(EXPAND2(EXPAND2(__VA_ARGS__))))
 #define EXPAND2(...) EXPAND1(EXPAND1(EXPAND1(EXPAND1(__VA_ARGS__))))
 #define EXPAND1(...) __VA_ARGS__
-
-#define A_EXPAND(...) A_EXPAND4(A_EXPAND4(A_EXPAND4(A_EXPAND4(__VA_ARGS__))))
-#define A_EXPAND4(...) A_EXPAND3(A_EXPAND3(A_EXPAND3(A_EXPAND3(__VA_ARGS__))))
-#define A_EXPAND3(...) A_EXPAND2(A_EXPAND2(A_EXPAND2(A_EXPAND2(__VA_ARGS__))))
-#define A_EXPAND2(...) A_EXPAND1(A_EXPAND1(A_EXPAND1(A_EXPAND1(__VA_ARGS__))))
-#define A_EXPAND1(...) __VA_ARGS__
-
 
 /*
 假设 x 有括号, 形如 (a, b, c)

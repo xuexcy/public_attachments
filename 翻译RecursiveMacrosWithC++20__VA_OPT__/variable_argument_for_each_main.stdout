@@ -27,8 +27,8 @@ value: (a + b)
 value: ((a + b), c)
 
 FOR_EACH PRINT_ADD
-add expression:
-add expression:
+add expression: 
+add expression: 
 add expression: EXPAND(a )
 add expression: EXPAND(a + b )
 add expression: EXPAND(a + EXPAND_ADD_AGAIN ()(b))
@@ -37,13 +37,13 @@ add expression: EXPAND((a, b) )
 add expression: EXPAND((a, b) + EXPAND_ADD_AGAIN ()(c, (d, e)))
 
 FOR_EACH PRINT_ADD_2
-add expression:
-add expression:
-add expression: a
-add expression: a + b
-add expression: a + b
-add expression: a + b
-add expression: (a, b) + c + (d, e)
+add expression: 
+add expression: 
+add expression: A_EXPAND(a )
+add expression: A_EXPAND(a + b )
+add expression: A_EXPAND(a + EXPAND_ADD_AGAIN ()(b))
+add expression: A_EXPAND(a + EXPAND_ADD_AGAIN ()(b))
+add expression: A_EXPAND((a, b) + EXPAND_ADD_AGAIN ()(c, (d, e)))
 
 FOR_EACH PRINT_HELLO
 hello
@@ -51,5 +51,6 @@ hello
 hello
 hello
 
-FOR_EACH PRINT_HELLO
+FOR_EACH PRINT_HELLO_2
+FOR_EACH can not handle object-like macro PRINT_HELLO_2
 
