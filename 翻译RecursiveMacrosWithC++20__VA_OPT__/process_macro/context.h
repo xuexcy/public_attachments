@@ -69,25 +69,4 @@ struct Context {
   };  // class iterator
   iterator begin() const;
   iterator end() const;
-  /*
-  void print_debug_string() {
-    auto formatted_token_to_end = [&token_to_end=this->token_to_end]() {
-      std::string init;
-      return std::accumulate(token_to_end.begin(), token_to_end.end(), init, [](const std::string& pre, auto& elem) {
-        return std::format("{}{}(\"{}\": {})",
-            pre,
-            pre.empty() ? "" : ", ",
-            elem.first,
-            elem.second);
-      });
-    }();
-    std::println(R"(Context {{
-  tokens: "{}",
-  rest: "{}",
-  unavailable_length: {},
-  token_to_end: {},
-  output: "{}"
-}})", tokens, rest, unavailable_length, formatted_token_to_end, output);
-  }
-*/
 };  // struct Context
