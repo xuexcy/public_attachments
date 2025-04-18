@@ -120,7 +120,7 @@ void run_for_each() {
 
   std::println("FOR_EACH PRINT_HELLO_2");
   // FOR_EACH(PRINT_HELLO_2, , , , );
-  std::println("FOR_EACH can not handle object-like macro PRINT_HELLO_2")
+  std::println("FOR_EACH can not handle object-like macro PRINT_HELLO_2");
   std::println();
 }
 int main() {
