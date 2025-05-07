@@ -107,3 +107,4 @@ set(EXTRA_LIBS ${EXTRA_LIBS} cpp_utils)
 # endforeach ()
 
 add_subdirectory(learning_grammar)
+add_subdirectory(stmp)
