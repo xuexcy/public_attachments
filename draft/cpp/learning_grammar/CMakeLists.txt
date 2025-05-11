@@ -12,3 +12,4 @@ include_directories(${CMAKE_CURRENT_SOURCE_DIR})
 
 add_executable(is_all_true is_all_true/main.cc)
 add_executable(three_way_comparation three_way_comparation/main.cc)
+add_executable(concept concept/main.cc)
