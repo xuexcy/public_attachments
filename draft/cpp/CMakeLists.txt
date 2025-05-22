@@ -106,5 +106,6 @@ set(EXTRA_LIBS ${EXTRA_LIBS} cpp_utils)
 #     target_link_libraries(${target_name} ${EXTRA_LIBS})
 # endforeach ()
 
+add_subdirectory(cpp_weekly_from_youtube)
 add_subdirectory(learning_grammar)
 add_subdirectory(stmp)
