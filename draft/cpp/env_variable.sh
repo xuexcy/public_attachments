@@ -11,7 +11,7 @@ echo ''
 
 export compiler=clang++
 # export compiler=g++
-export default_execute_file=concept
+export default_execute_file=define_template_in_cpp_file/dticf
 
 # cmake 工作目录
 if [[ $compiler == "g++" ]];
