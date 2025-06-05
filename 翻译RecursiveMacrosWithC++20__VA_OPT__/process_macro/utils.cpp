@@ -18,15 +18,16 @@
 namespace utils {
 
 View ltrim(View input) {
-  size_t idx{0};
-  while (idx < input.size() && input[idx] == ' ') { ++idx; }
-  return input.substr(idx);
+  auto start = input.find_first_not_of(' ');
+  return start == View::npos ? input.substr(input.size()) : input.substr(start);
 }
 
 View rtrim(View input) {
-  int32_t idx = input.size() - 1;
-  while (idx >=0 && input[idx] == ' ') { --idx; }
-  return idx >= 0 ? input.substr(0, idx + 1) : "";
+  auto end = input.find_last_not_of(' ');
+  return end == View::npos ? input.substr(0, 0) : input.substr(0, end + 1);
+//  int32_t idx = input.size() - 1;
+//  while (idx >=0 && input[idx] == ' ') { --idx; }
+//  return idx >= 0 ? input.substr(0, idx + 1) : "";
 }
 
 View trim(View input) {
