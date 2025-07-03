@@ -19,7 +19,7 @@ source ./env_variable.sh
 
 # cmake ..
 
-main=$default_execute_file
+main=`basename $default_execute_file`
 if [ $# -gt 0 ]; then
     main=$1
 fi

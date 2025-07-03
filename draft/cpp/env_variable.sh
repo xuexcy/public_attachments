@@ -9,9 +9,9 @@ fi
 echo "Project root dir:" $this_script_dir
 echo ''
 
-export compiler=clang++
-# export compiler=g++
-export default_execute_file=define_template_in_cpp_file/dticf
+#export compiler=clang++
+export compiler=g++
+export default_execute_file=learning_grammar/generator
 
 # cmake 工作目录
 if [[ $compiler == "g++" ]];

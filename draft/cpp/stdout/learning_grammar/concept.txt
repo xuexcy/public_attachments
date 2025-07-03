@@ -1,0 +1,10 @@
+void run_1()
+
+void run_2()
+
+void run_equal()
+void f2(T) [with T = int]
+
+void run_bool()
+void p(int)
+

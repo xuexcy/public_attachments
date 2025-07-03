@@ -73,7 +73,7 @@ void run_array() {
   std::println();
 
   const auto [a, b, c, d, e] = arr;
-  std::println("sum(arr) = ", a + b + c + d + e);
+  std::println("sum(arr) = {}", a + b + c + d + e);
 }
 
 int main() {

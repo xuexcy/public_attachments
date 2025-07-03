@@ -1,0 +1,12 @@
+void run_name() [with T = before_cpp11::Name]
+first_name: a, mid_name: b, last_name: c
+first_name: a, mid_name: b, last_name: d
+first_name: b, mid_name: c, last_name: d
+void run_name() [with T = after_cpp11::Name]
+first_name: a, mid_name: b, last_name: c
+first_name: a, mid_name: b, last_name: d
+first_name: b, mid_name: c, last_name: d
+void run_name() [with T = cpp20::Name]
+first_name: a, mid_name: b, last_name: c
+first_name: a, mid_name: b, last_name: d
+first_name: b, mid_name: c, last_name: d

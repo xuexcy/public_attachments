@@ -1,0 +1,33 @@
+bool is_all_true_v1(const std::initializer_list<bool>&)
+is_all_true_v1(a, b, c): true
+bool is_all_true_v2(Args&& ...) [with Args = {int&, bool&, run_is_all_true()::<lambda()>&}]
+is_all_true_v2(a, b, c): true
+bool is_all_true_v3(Args&& ...) [with Args = {int&, bool&, run_is_all_true()::<lambda()>&}]
+this is c: true
+is_all_true_v3(a, b, c): true
+bool is_all_true_v1(const std::initializer_list<bool>&)
+is_all_true_v1({d1, d1->value}): true
+bool is_all_true_v2(Args&& ...) [with Args = {Data*&, int&}]
+is_all_true_v2(d1, d1->value): true
+bool is_all_true_v3(Args&& ...) [with Args = {Data*&, int&}]
+is_all_true_v3(d1, d1->value): true
+bool is_all_true_v3(Args&& ...) [with Args = {Data*&, int&}]
+is_all_true_v3(d2, d2->value): false
+bool is_all_true_v2(Args&& ...) [with Args = {bool&, run_is_all_true()::<lambda()>&}]
+is_all_true_v2(b, c): true
+bool is_all_true_v2(Args&& ...) [with Args = {int*&, run_is_all_true()::<lambda()>&}]
+is_all_true_v2(d, c): false
+bool is_all_true_v3(Args&& ...) [with Args = {bool&, run_is_all_true()::<lambda()>&}]
+this is c: true
+is_all_true_v3(b, c): true
+bool is_all_true_v3(Args&& ...) [with Args = {int*&, run_is_all_true()::<lambda()>&}]
+is_all_true_v3(d, c): false
+bool is_all_true_v2(Args&& ...) [with Args = {run_is_all_true()::<lambda()>&, run_is_all_true()::<lambda()>&}]
+is_all_true_v2(c, e): true
+bool is_all_true_v3(Args&& ...) [with Args = {run_is_all_true()::<lambda()>&, run_is_all_true()::<lambda()>&}]
+this is c: true
+this is e: false
+is_all_true_v3(c, e): false
+bool is_all_true_v3(Args&& ...) [with Args = {run_is_all_true()::<lambda()>&, run_is_all_true()::<lambda()>&}]
+this is e: false
+is_all_true_v3(e, c): false

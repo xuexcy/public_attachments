@@ -20,9 +20,10 @@ cd $build_output_bin_dir
 stdout_dir=${CUR_DIR}/stdout
 echo 'stdout_dir:' $stdout_dir
 mkdir -p $stdout_dir
-for file in *
-do
+
+find . -type f | while read -r file; do
     output=$stdout_dir/$file.txt
+    mkdir -p `dirname $output`
     echo 'start' $file
     ./$file > $output
     if [ $? -ne 0 ]; then
@@ -31,7 +32,6 @@ do
     fi
     echo 'end ' $file
 done
-
 cd -
 
 

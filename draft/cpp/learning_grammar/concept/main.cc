@@ -239,8 +239,8 @@ struct G {
   constexpr operator bool() const { return true; }
 };  // struct G
 template <typename T>
-requires (S<T>{})  // clang 19.1.7 好像可以编译
-// requires (bool(S<T>{}))
+//requires (S<T>{})  // clang 19.1.7 好像可以编译
+requires (bool(S<T>{}))
 // requires (S<T>{}())
 void p(T) {
   PRINT_CURRENT_FUNCTION_NAME;
