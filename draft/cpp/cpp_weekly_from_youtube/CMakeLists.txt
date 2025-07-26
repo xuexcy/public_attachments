@@ -10,3 +10,4 @@ message("CMAKE_RUNTIME_OUTPUT_DIRECTORY: ${CMAKE_RUNTIME_OUTPUT_DIRECTORY}")
 include_directories(${CMAKE_CURRENT_SOURCE_DIR})
 
 add_executable(std_array_ep_259 std_array_ep_259.cc)
+add_executable(std_ignore_ep_490 std_ignore_ep_490.cc)
