@@ -15,4 +15,12 @@ include_directories(${CMAKE_CURRENT_SOURCE_DIR})
 add_executable(is_all_true is_all_true/main.cc)
 add_executable(three_way_comparation three_way_comparation/main.cc)
 add_executable(concept concept/main.cc)
-add_executable(generator generator/main.cc)
+
+if (CMAKE_CXX_COMPILER_ID STREQUAL "Clang")
+    add_executable(generator generator/main.cc)
+endif()
+
+if ($ENV{use_cpp_modules})
+    # macos 上还不能编译通过
+    add_subdirectory(cpp23_modules)
+endif()

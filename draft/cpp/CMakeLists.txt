@@ -1,11 +1,19 @@
-cmake_minimum_required(VERSION 3.28)
-project(cpp_cmake_project_template)
-
+cmake_minimum_required(VERSION 4.0.0)
 set(CMAKE_CXX_STANDARD 23)
-set(CMAKE_CXX_STANDARD_REQUIRED True)
+
 set(CMAKE_EXPORT_COMPILE_COMMANDS ON)
+
+set(CMAKE_CXX_STANDARD_REQUIRED ON)
 message ("compiler: ${CMAKE_CXX_COMPILER}")
 # set(CMAKE_BUILD_TYPE Debug)
+
+if ($ENV{use_cpp_modules})
+    set(CMAKE_EXPERIMENTAL_CXX_IMPORT_STD "d0edc3af-4c50-42ea-a356-e2862fe7a444")
+    set(CMAKE_CXX_MODULE_STD ON)
+endif()
+
+project(cpp_cmake_project_template LANGUAGES CXX)
+
 
 set(THIRDPARTY_DIR ${CMAKE_SOURCE_DIR}/thirdparty)
 message("thirdparty dir: " ${THIRDPARTY_DIR})
@@ -107,6 +115,10 @@ set(EXTRA_LIBS ${EXTRA_LIBS} cpp_utils)
 # endforeach ()
 
 add_subdirectory(cpp_weekly_from_youtube)
-add_subdirectory(define_template_in_cpp_file)
+if (CMAKE_CXX_COMPILER_ID STREQUAL "Clang")
+    add_subdirectory(define_template_in_cpp_file)
+endif()
+
+message("hlhklhlk $ENV{use_cpp_modules}")
 add_subdirectory(learning_grammar)
 add_subdirectory(stmp)

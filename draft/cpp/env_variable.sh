@@ -11,7 +11,8 @@ echo ''
 
 #export compiler=clang++
 export compiler=g++
-export default_execute_file=learning_grammar/generator
+export use_cpp_modules=0 # 只在 ubuntu 上测试通过了, macos 上还不行
+export default_execute_file=learning_grammar/cpp23_modules
 
 # cmake 工作目录
 if [[ $compiler == "g++" ]];
