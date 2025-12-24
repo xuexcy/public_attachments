@@ -25,3 +25,4 @@ books/Deep[[:space:]]Learning[[:space:]]in[[:space:]]Knowledge[[:space:]]Graph.p
 books/dlbook_cn_v0.5-beta.pdf filter=lfs diff=lfs merge=lfs -text
 books/docker_practice.pdf filter=lfs diff=lfs merge=lfs -text
 books/* filter=lfs diff=lfs merge=lfs -text
+*.pdf filter=lfs diff=lfs merge=lfs -text
