@@ -5,7 +5,7 @@
 #
 ########################################################################
 # Author : xuechengyun
-# E-mail : xuechengyun@gmail.com
+# E-mail : xuechengyunxue@gmail.com
 # Date   : 2025/05/07 22:34:09
 # Desc   : ref: https://zhuanlan.zhihu.com/p/101004501
 ########################################################################
